@@ -8,7 +8,7 @@ public class Vertex <T>{
 
     private boolean visited;
 
-    private List<Vertex<T>> adyacents;
+    private final List<Vertex<T>> adyacents;
 
     public Vertex(T info) {
         this.info = info;
@@ -39,5 +39,9 @@ public class Vertex <T>{
 
     public void addVertex( Vertex<T> vertex){
         adyacents.add( vertex );
+    }
+
+    public List<Vertex<T>> getAdyacents() {
+        return adyacents;
     }
 }
